@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hiroforyou.github.io/react-crud-with-ibm-serveless/precache-manifest.2ac71d542b9b023f4c1ef7c403c1fbfb.js"
+  "/hiroforyou.github.io/react-crud-with-ibm-serveless/precache-manifest.d99fef3828e701b902aee501c9d39137.js"
 );
 
 self.addEventListener('message', (event) => {

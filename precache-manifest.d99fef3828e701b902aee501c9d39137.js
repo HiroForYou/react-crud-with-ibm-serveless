@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d70ac6172df4c8189a755fe8fb0d8896",
+    "revision": "a3bbbe74f8706fbda14fd276e0ad23df",
     "url": "/hiroforyou.github.io/react-crud-with-ibm-serveless/index.html"
   },
   {
-    "revision": "b5ec630c50d48ed775ff",
+    "revision": "446c936e906d0317035c",
     "url": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css"
   },
   {
-    "revision": "1c5c62d1455545abc178",
-    "url": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.db0c5567.chunk.js"
+    "revision": "adebf6ef97c13d9d1e43",
+    "url": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.876cc95e.chunk.js"
   },
   {
     "revision": "94db950e4c9c0176fe2653d1cd4d5944",
-    "url": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.db0c5567.chunk.js.LICENSE.txt"
+    "url": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.876cc95e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b5ec630c50d48ed775ff",
-    "url": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/main.b9df2244.chunk.js"
+    "revision": "446c936e906d0317035c",
+    "url": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/main.1f65a42c.chunk.js"
+  },
+  {
+    "revision": "4e0e34f265fae8f33b01b27ae29d9d6f",
+    "url": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/main.1f65a42c.chunk.js.LICENSE.txt"
   },
   {
     "revision": "cd5b7db972499bf636c3",

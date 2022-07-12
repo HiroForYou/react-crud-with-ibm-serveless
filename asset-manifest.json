@@ -1,23 +1,24 @@
 {
   "files": {
     "main.css": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css",
-    "main.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/main.b9df2244.chunk.js",
-    "main.js.map": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/main.b9df2244.chunk.js.map",
+    "main.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/main.1f65a42c.chunk.js",
+    "main.js.map": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/main.1f65a42c.chunk.js.map",
     "runtime-main.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/runtime-main.3aa56da4.js",
     "runtime-main.js.map": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/runtime-main.3aa56da4.js.map",
-    "static/js/2.db0c5567.chunk.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.db0c5567.chunk.js",
-    "static/js/2.db0c5567.chunk.js.map": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.db0c5567.chunk.js.map",
+    "static/js/2.876cc95e.chunk.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.876cc95e.chunk.js",
+    "static/js/2.876cc95e.chunk.js.map": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.876cc95e.chunk.js.map",
     "index.html": "/hiroforyou.github.io/react-crud-with-ibm-serveless/index.html",
-    "precache-manifest.2ac71d542b9b023f4c1ef7c403c1fbfb.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/precache-manifest.2ac71d542b9b023f4c1ef7c403c1fbfb.js",
+    "precache-manifest.d99fef3828e701b902aee501c9d39137.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/precache-manifest.d99fef3828e701b902aee501c9d39137.js",
     "service-worker.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/service-worker.js",
     "static/css/main.8ab6f918.chunk.css.map": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css.map",
-    "static/js/2.db0c5567.chunk.js.LICENSE.txt": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.db0c5567.chunk.js.LICENSE.txt",
+    "static/js/2.876cc95e.chunk.js.LICENSE.txt": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.876cc95e.chunk.js.LICENSE.txt",
+    "static/js/main.1f65a42c.chunk.js.LICENSE.txt": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/main.1f65a42c.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/media/logo.ee7cd8ed.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3aa56da4.js",
-    "static/js/2.db0c5567.chunk.js",
+    "static/js/2.876cc95e.chunk.js",
     "static/css/main.8ab6f918.chunk.css",
-    "static/js/main.b9df2244.chunk.js"
+    "static/js/main.1f65a42c.chunk.js"
   ]
 }
