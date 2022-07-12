@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css",
-    "main.js": "/react-crud-with-ibm-serveless/static/js/main.dc519aa3.chunk.js",
-    "main.js.map": "/react-crud-with-ibm-serveless/static/js/main.dc519aa3.chunk.js.map",
+    "main.js": "/react-crud-with-ibm-serveless/static/js/main.7d324f1e.chunk.js",
+    "main.js.map": "/react-crud-with-ibm-serveless/static/js/main.7d324f1e.chunk.js.map",
     "runtime-main.js": "/react-crud-with-ibm-serveless/static/js/runtime-main.4cd728fb.js",
     "runtime-main.js.map": "/react-crud-with-ibm-serveless/static/js/runtime-main.4cd728fb.js.map",
-    "static/js/2.876cc95e.chunk.js": "/react-crud-with-ibm-serveless/static/js/2.876cc95e.chunk.js",
-    "static/js/2.876cc95e.chunk.js.map": "/react-crud-with-ibm-serveless/static/js/2.876cc95e.chunk.js.map",
+    "static/js/2.730f79b1.chunk.js": "/react-crud-with-ibm-serveless/static/js/2.730f79b1.chunk.js",
+    "static/js/2.730f79b1.chunk.js.map": "/react-crud-with-ibm-serveless/static/js/2.730f79b1.chunk.js.map",
     "index.html": "/react-crud-with-ibm-serveless/index.html",
-    "precache-manifest.8e83ede2ce9f8222a3481a29d493f3a8.js": "/react-crud-with-ibm-serveless/precache-manifest.8e83ede2ce9f8222a3481a29d493f3a8.js",
+    "precache-manifest.c544e200f0f30e1ae783c9024fe5f6f1.js": "/react-crud-with-ibm-serveless/precache-manifest.c544e200f0f30e1ae783c9024fe5f6f1.js",
     "service-worker.js": "/react-crud-with-ibm-serveless/service-worker.js",
     "static/css/main.8ab6f918.chunk.css.map": "/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css.map",
-    "static/js/2.876cc95e.chunk.js.LICENSE.txt": "/react-crud-with-ibm-serveless/static/js/2.876cc95e.chunk.js.LICENSE.txt",
-    "static/js/main.dc519aa3.chunk.js.LICENSE.txt": "/react-crud-with-ibm-serveless/static/js/main.dc519aa3.chunk.js.LICENSE.txt",
+    "static/js/2.730f79b1.chunk.js.LICENSE.txt": "/react-crud-with-ibm-serveless/static/js/2.730f79b1.chunk.js.LICENSE.txt",
+    "static/js/main.7d324f1e.chunk.js.LICENSE.txt": "/react-crud-with-ibm-serveless/static/js/main.7d324f1e.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/react-crud-with-ibm-serveless/static/media/logo.ee7cd8ed.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.4cd728fb.js",
-    "static/js/2.876cc95e.chunk.js",
+    "static/js/2.730f79b1.chunk.js",
     "static/css/main.8ab6f918.chunk.css",
-    "static/js/main.dc519aa3.chunk.js"
+    "static/js/main.7d324f1e.chunk.js"
   ]
 }

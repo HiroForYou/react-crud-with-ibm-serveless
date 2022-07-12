@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2d632a84f6ed675fafe43fbb14991aca",
+    "revision": "06a9d9bee7c198fbd1810f1269d3b28a",
     "url": "/react-crud-with-ibm-serveless/index.html"
   },
   {
-    "revision": "cb5600a70d0874809367",
+    "revision": "5dccbe4dd629ab97f18a",
     "url": "/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css"
   },
   {
-    "revision": "adebf6ef97c13d9d1e43",
-    "url": "/react-crud-with-ibm-serveless/static/js/2.876cc95e.chunk.js"
+    "revision": "1d574b0395718f44db5a",
+    "url": "/react-crud-with-ibm-serveless/static/js/2.730f79b1.chunk.js"
   },
   {
     "revision": "94db950e4c9c0176fe2653d1cd4d5944",
-    "url": "/react-crud-with-ibm-serveless/static/js/2.876cc95e.chunk.js.LICENSE.txt"
+    "url": "/react-crud-with-ibm-serveless/static/js/2.730f79b1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cb5600a70d0874809367",
-    "url": "/react-crud-with-ibm-serveless/static/js/main.dc519aa3.chunk.js"
+    "revision": "5dccbe4dd629ab97f18a",
+    "url": "/react-crud-with-ibm-serveless/static/js/main.7d324f1e.chunk.js"
   },
   {
     "revision": "4e0e34f265fae8f33b01b27ae29d9d6f",
-    "url": "/react-crud-with-ibm-serveless/static/js/main.dc519aa3.chunk.js.LICENSE.txt"
+    "url": "/react-crud-with-ibm-serveless/static/js/main.7d324f1e.chunk.js.LICENSE.txt"
   },
   {
     "revision": "bb7c20d42609ac8d29ae",
