@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3f9da508a4d2c7cb962da39ebfb532c1",
+    "revision": "22d89f5e6202bd3d5e7f8a343f7fd76a",
     "url": "/react-crud-with-ibm-serveless/index.html"
   },
   {
-    "revision": "acb8ebae84adbaadd6cb",
+    "revision": "8a47f36b7ab42af95e19",
     "url": "/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-crud-with-ibm-serveless/static/js/2.4376bfee.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "acb8ebae84adbaadd6cb",
-    "url": "/react-crud-with-ibm-serveless/static/js/main.e8976498.chunk.js"
+    "revision": "8a47f36b7ab42af95e19",
+    "url": "/react-crud-with-ibm-serveless/static/js/main.a7e70859.chunk.js"
   },
   {
     "revision": "bb7c20d42609ac8d29ae",

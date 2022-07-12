@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css",
-    "main.js": "/react-crud-with-ibm-serveless/static/js/main.e8976498.chunk.js",
-    "main.js.map": "/react-crud-with-ibm-serveless/static/js/main.e8976498.chunk.js.map",
+    "main.js": "/react-crud-with-ibm-serveless/static/js/main.a7e70859.chunk.js",
+    "main.js.map": "/react-crud-with-ibm-serveless/static/js/main.a7e70859.chunk.js.map",
     "runtime-main.js": "/react-crud-with-ibm-serveless/static/js/runtime-main.4cd728fb.js",
     "runtime-main.js.map": "/react-crud-with-ibm-serveless/static/js/runtime-main.4cd728fb.js.map",
     "static/js/2.4376bfee.chunk.js": "/react-crud-with-ibm-serveless/static/js/2.4376bfee.chunk.js",
     "static/js/2.4376bfee.chunk.js.map": "/react-crud-with-ibm-serveless/static/js/2.4376bfee.chunk.js.map",
     "index.html": "/react-crud-with-ibm-serveless/index.html",
-    "precache-manifest.3d7ce5115ca01cd25293573261742aa0.js": "/react-crud-with-ibm-serveless/precache-manifest.3d7ce5115ca01cd25293573261742aa0.js",
+    "precache-manifest.8839160b67648e698bd974c30361db61.js": "/react-crud-with-ibm-serveless/precache-manifest.8839160b67648e698bd974c30361db61.js",
     "service-worker.js": "/react-crud-with-ibm-serveless/service-worker.js",
     "static/css/main.8ab6f918.chunk.css.map": "/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css.map",
     "static/js/2.4376bfee.chunk.js.LICENSE.txt": "/react-crud-with-ibm-serveless/static/js/2.4376bfee.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.4cd728fb.js",
     "static/js/2.4376bfee.chunk.js",
     "static/css/main.8ab6f918.chunk.css",
-    "static/js/main.e8976498.chunk.js"
+    "static/js/main.a7e70859.chunk.js"
   ]
 }
