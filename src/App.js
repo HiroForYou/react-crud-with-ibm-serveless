@@ -56,7 +56,7 @@ function App() {
         {welcomeDisplayState && (
           <div> Bienvenido {userName}! Ahora estas autenticado.</div>
         )}
-        {/* {loginButtonDisplayState && (
+        {loginButtonDisplayState && (
           <button
             style={{
               fontSize: "24px",
@@ -64,11 +64,12 @@ function App() {
               border: "none",
             }}
             id="login"
-            onClick={loginAction}
+            /* onClick={loginAction} */
+            onClick={() => console.log("holii")}
           >
             Login
           </button>
-        )} */}
+        )}
         {errorState && <div style={{ color: "red" }}>{errorMessage}</div>}
       </header>
     </div>
