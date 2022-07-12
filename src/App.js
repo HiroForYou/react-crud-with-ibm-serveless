@@ -4,14 +4,14 @@ import "./App.css";
 import AppID from "ibmcloud-appid-js";
 
 function App() {
-  /* const appID = useMemo(() => {
+  const appID = useMemo(() => {
     return new AppID();
-  }, []); */
+  }, []);
 
   const [errorState, setErrorState] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  /* (async () => {
+  (async () => {
     try {
       await appID.init({
         clientId: "3f828d3a-c911-4be5-9864-84d243ca39d9",
@@ -29,13 +29,13 @@ function App() {
       setErrorState(true);
       setErrorMessage(e.message);
     }
-  })(); */
+  })();
 
   const [welcomeDisplayState, setWelcomeDisplayState] = useState(false);
   const [loginButtonDisplayState, setLoginButtonDisplayState] = useState(true);
   const [userName, setUserName] = useState("");
 
-  /* const loginAction = async () => {
+  const loginAction = async () => {
     try {
       const tokens = await appID.signin();
       console.log("tokens", tokens);
@@ -47,7 +47,7 @@ function App() {
       setErrorState(true);
       setErrorMessage(e.message);
     }
-  }; */
+  };
 
   return (
     <div className="App">
@@ -64,7 +64,7 @@ function App() {
               border: "none",
             }}
             id="login"
-            onClick={() => console.log("holii")}
+            onClick={loginAction}
           >
             Login
           </button>
