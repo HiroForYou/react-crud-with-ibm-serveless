@@ -1,7 +1,7 @@
 {
   "name": "react-crud-with-ibm-serveless",
   "version": "0.1.0",
-  "homepage": "hiroforyou.github.io/react-crud-with-ibm-serveless",
+  "homepage": "https://hiroforyou.github.io/react-crud-with-ibm-serveless",
   "private": false,
   "dependencies": {
     "ibmcloud-appid-js": "^0.3.1",
