@@ -11,31 +11,24 @@ function App() {
   const [errorState, setErrorState] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  (async () => {
+  /* (async () => {
     try {
       await appID.init({
         clientId: "3f828d3a-c911-4be5-9864-84d243ca39d9",
-        tenantId: "04d1fde9-f03b-436e-b719-4c3a34782af0",
-        name: "react",
-        oAuthServerUrl:
-          "https://us-south.appid.cloud.ibm.com/oauth/v4/04d1fde9-f03b-436e-b719-4c3a34782af0",
-        profilesUrl: "https://us-south.appid.cloud.ibm.com",
         discoveryEndpoint:
           "https://us-south.appid.cloud.ibm.com/oauth/v4/04d1fde9-f03b-436e-b719-4c3a34782af0/.well-known/openid-configuration",
-        type: "singlepageapp",
-        scopes: [],
       });
     } catch (e) {
       setErrorState(true);
       setErrorMessage(e.message);
     }
-  })();
+  })(); */
 
   const [welcomeDisplayState, setWelcomeDisplayState] = useState(false);
   const [loginButtonDisplayState, setLoginButtonDisplayState] = useState(true);
   const [userName, setUserName] = useState("");
 
-  const loginAction = async () => {
+  /* const loginAction = async () => {
     try {
       const tokens = await appID.signin();
       console.log("tokens", tokens);
@@ -47,7 +40,7 @@ function App() {
       setErrorState(true);
       setErrorMessage(e.message);
     }
-  };
+  }; */
 
   return (
     <div className="App">
@@ -64,7 +57,19 @@ function App() {
               border: "none",
             }}
             id="login"
-            onClick={loginAction}
+            onClick={async () => {
+              try {
+                await appID.init({
+                  clientId: "3f828d3a-c911-4be5-9864-84d243ca39d9",
+                  discoveryEndpoint:
+                    "https://us-south.appid.cloud.ibm.com/oauth/v4/04d1fde9-f03b-436e-b719-4c3a34782af0/.well-known/openid-configuration",
+                });
+                const tokens = await appID.signin();
+                console.log("tokens", tokens);
+              } catch (e) {
+                console.log("e!", e);
+              }
+            }}
             /* onClick={() => console.log("holii")} */
           >
             Login
