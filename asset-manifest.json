@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css",
-    "main.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/main.e8976498.chunk.js",
-    "main.js.map": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/main.e8976498.chunk.js.map",
-    "runtime-main.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/runtime-main.3aa56da4.js",
-    "runtime-main.js.map": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/runtime-main.3aa56da4.js.map",
-    "static/js/2.4376bfee.chunk.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.4376bfee.chunk.js",
-    "static/js/2.4376bfee.chunk.js.map": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.4376bfee.chunk.js.map",
-    "index.html": "/hiroforyou.github.io/react-crud-with-ibm-serveless/index.html",
-    "precache-manifest.bb32a878670192afb11ba7c34ebaef45.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/precache-manifest.bb32a878670192afb11ba7c34ebaef45.js",
-    "service-worker.js": "/hiroforyou.github.io/react-crud-with-ibm-serveless/service-worker.js",
-    "static/css/main.8ab6f918.chunk.css.map": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css.map",
-    "static/js/2.4376bfee.chunk.js.LICENSE.txt": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/js/2.4376bfee.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/hiroforyou.github.io/react-crud-with-ibm-serveless/static/media/logo.ee7cd8ed.svg"
+    "main.css": "/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css",
+    "main.js": "/react-crud-with-ibm-serveless/static/js/main.e8976498.chunk.js",
+    "main.js.map": "/react-crud-with-ibm-serveless/static/js/main.e8976498.chunk.js.map",
+    "runtime-main.js": "/react-crud-with-ibm-serveless/static/js/runtime-main.4cd728fb.js",
+    "runtime-main.js.map": "/react-crud-with-ibm-serveless/static/js/runtime-main.4cd728fb.js.map",
+    "static/js/2.4376bfee.chunk.js": "/react-crud-with-ibm-serveless/static/js/2.4376bfee.chunk.js",
+    "static/js/2.4376bfee.chunk.js.map": "/react-crud-with-ibm-serveless/static/js/2.4376bfee.chunk.js.map",
+    "index.html": "/react-crud-with-ibm-serveless/index.html",
+    "precache-manifest.3d7ce5115ca01cd25293573261742aa0.js": "/react-crud-with-ibm-serveless/precache-manifest.3d7ce5115ca01cd25293573261742aa0.js",
+    "service-worker.js": "/react-crud-with-ibm-serveless/service-worker.js",
+    "static/css/main.8ab6f918.chunk.css.map": "/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css.map",
+    "static/js/2.4376bfee.chunk.js.LICENSE.txt": "/react-crud-with-ibm-serveless/static/js/2.4376bfee.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/react-crud-with-ibm-serveless/static/media/logo.ee7cd8ed.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3aa56da4.js",
+    "static/js/runtime-main.4cd728fb.js",
     "static/js/2.4376bfee.chunk.js",
     "static/css/main.8ab6f918.chunk.css",
     "static/js/main.e8976498.chunk.js"
