@@ -1,7 +1,15 @@
 const URL = process.env.REACT_APP_ENDPOINT_SERVELESS;
+const userInfo = JSON.parse(localStorage.getItem("useInfo")) || "";
+const BEARER = userInfo["accessToken"] || "";
 
 const getProducts = () => {
-  return fetch(URL).then((response) => response.json());
+  return fetch(URL, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + BEARER,
+    },
+  }).then((response) => response.json());
 };
 
 const getCreatedProduct = (product) => {
@@ -9,6 +17,7 @@ const getCreatedProduct = (product) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: "Bearer " + BEARER,
     },
     body: JSON.stringify(product),
   }).then((response) => response.json());
@@ -20,6 +29,7 @@ const getUpdatedProduct = (product) => {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
+      Authorization: "Bearer " + BEARER,
     },
     body: JSON.stringify({
       doc: {
@@ -45,6 +55,7 @@ const getDeletedProduct = (_id, _rev) => {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
+      Authorization: "Bearer " + BEARER,
     },
     body: JSON.stringify({
       docid: _id,

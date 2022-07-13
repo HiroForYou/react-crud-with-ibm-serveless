@@ -20,6 +20,7 @@ const Header = () => {
         discoveryEndpoint: process.env.REACT_APP_DISCOVERY_ENDPOINT,
       });
       const tokens = await appID.signin();
+      // access token
       console.log("tokens", tokens);
       localStorage.setItem("useInfo", JSON.stringify(tokens));
       setSesionActive(true);
