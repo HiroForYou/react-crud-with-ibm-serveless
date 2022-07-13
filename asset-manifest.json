@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css",
-    "main.js": "/react-crud-with-ibm-serveless/static/js/main.7d324f1e.chunk.js",
-    "main.js.map": "/react-crud-with-ibm-serveless/static/js/main.7d324f1e.chunk.js.map",
+    "main.css": "/react-crud-with-ibm-serveless/static/css/main.adee3e2d.chunk.css",
+    "main.js": "/react-crud-with-ibm-serveless/static/js/main.d357c2e0.chunk.js",
+    "main.js.map": "/react-crud-with-ibm-serveless/static/js/main.d357c2e0.chunk.js.map",
     "runtime-main.js": "/react-crud-with-ibm-serveless/static/js/runtime-main.4cd728fb.js",
     "runtime-main.js.map": "/react-crud-with-ibm-serveless/static/js/runtime-main.4cd728fb.js.map",
-    "static/js/2.730f79b1.chunk.js": "/react-crud-with-ibm-serveless/static/js/2.730f79b1.chunk.js",
-    "static/js/2.730f79b1.chunk.js.map": "/react-crud-with-ibm-serveless/static/js/2.730f79b1.chunk.js.map",
+    "static/js/2.ea4e58d1.chunk.js": "/react-crud-with-ibm-serveless/static/js/2.ea4e58d1.chunk.js",
+    "static/js/2.ea4e58d1.chunk.js.map": "/react-crud-with-ibm-serveless/static/js/2.ea4e58d1.chunk.js.map",
     "index.html": "/react-crud-with-ibm-serveless/index.html",
-    "precache-manifest.c544e200f0f30e1ae783c9024fe5f6f1.js": "/react-crud-with-ibm-serveless/precache-manifest.c544e200f0f30e1ae783c9024fe5f6f1.js",
+    "precache-manifest.cb19d742e44276f45dd8fa68feda3930.js": "/react-crud-with-ibm-serveless/precache-manifest.cb19d742e44276f45dd8fa68feda3930.js",
     "service-worker.js": "/react-crud-with-ibm-serveless/service-worker.js",
-    "static/css/main.8ab6f918.chunk.css.map": "/react-crud-with-ibm-serveless/static/css/main.8ab6f918.chunk.css.map",
-    "static/js/2.730f79b1.chunk.js.LICENSE.txt": "/react-crud-with-ibm-serveless/static/js/2.730f79b1.chunk.js.LICENSE.txt",
-    "static/js/main.7d324f1e.chunk.js.LICENSE.txt": "/react-crud-with-ibm-serveless/static/js/main.7d324f1e.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/react-crud-with-ibm-serveless/static/media/logo.ee7cd8ed.svg"
+    "static/css/main.adee3e2d.chunk.css.map": "/react-crud-with-ibm-serveless/static/css/main.adee3e2d.chunk.css.map",
+    "static/js/2.ea4e58d1.chunk.js.LICENSE.txt": "/react-crud-with-ibm-serveless/static/js/2.ea4e58d1.chunk.js.LICENSE.txt",
+    "static/js/main.d357c2e0.chunk.js.LICENSE.txt": "/react-crud-with-ibm-serveless/static/js/main.d357c2e0.chunk.js.LICENSE.txt",
+    "static/media/placeholder-product.jpg": "/react-crud-with-ibm-serveless/static/media/placeholder-product.15e4c67e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.4cd728fb.js",
-    "static/js/2.730f79b1.chunk.js",
-    "static/css/main.8ab6f918.chunk.css",
-    "static/js/main.7d324f1e.chunk.js"
+    "static/js/2.ea4e58d1.chunk.js",
+    "static/css/main.adee3e2d.chunk.css",
+    "static/js/main.d357c2e0.chunk.js"
   ]
 }
