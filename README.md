@@ -1,57 +1,78 @@
-# IBM Cloud App ID React Sample App
+# Aplicación de muestra de IBM Cloud App ID React
 
-The IBM Cloud App ID SDK can be used with React to create a secure single-page application. You will need an IBM Cloud App ID instance with a single-page application created. Use the client ID and discovery endpoint from your application credentials to initialize the App ID instance.
+El SDK de IBM Cloud App ID se puede utilizar con React para crear una aplicación segura de una sola página. Necesitará una instancia de IBM Cloud App ID con una aplicación de una sola página creada. Utilice el ID de cliente y el extremo de detección de las credenciales de su aplicación para inicializar la instancia de ID de la aplicación.
 
-## Prerequisites
-* Node.js version 8 or later
-* npm package manager
-* [IBM Cloud App ID](https://cloud.ibm.com/catalog/services/app-id) instance with [SPA credentials](https://cloud.ibm.com/docs/services/appid?topic=appid-single-page#create-spa-credentials)
-* A [Redirect URI](https://cloud.ibm.com/docs/services/appid?topic=appid-managing-idp#add-redirect-uri) set in the App ID service dashboard
+<p align="center">
+	<img src='src/img/flow.png' alt='Preview'>
+</p>
 
-## To run locally
+## Requisitos previos
 
-1. Clone the repository.
+- Node.js versión 8 o posterior
+- Administrador de paquetes npm
+- Instancia de [IBM Cloud App ID](https://cloud.ibm.com/catalog/services/app-id) con [credenciales de SPA](https://cloud.ibm.com/docs/services/appid?topic=appid-single-page#create-spa-credentials)
+- Un [URI de redirección](https://cloud.ibm.com/docs/services/appid?topic=appid-managing-idp#add-redirect-uri) establecido en el panel de control del servicio App ID
+
+## Correr localmente
+
+1. Clonar el repositorio.
+
 ```
-git clone https://github.com/ibm-cloud-security/appid-sample-code-snippets.git
+git clone https://github.com/HiroForYou/react-crud-with-ibm-serveless.git
 ```
-2. Navigate to application workspace folder.
+
+2. Navegue a la carpeta del espacio de trabajo de la aplicación.
+
 ```
-cd react-sample-app
+cd react-crud-with-ibm-serveless
 ```
-3. Install dependencies for the application.
+
+3. Instalar dependencias para la aplicación.
+
 ```
 npm install
 ```
-4. Start the development server. Navigate to http://localhost:3000 to access your application.
+
+4. Inicie el servidor de desarrollo. Navegue a http://localhost:3000 para acceder a su aplicación.
+
 ```
 npm start
 ```
 
-## Detailed instructions on Creating your app
+## Instrucciones detalladas sobre cómo crear su aplicación
 
-1. Set up a frontend build pipeline using create-react-app. Then move into the project directory.
+1. Configure una canalización de compilación de frontend usando create-react-app. Luego muévase al directorio del proyecto.
+
 ```
 npx create-react-app my-app
 cd my-app
 ```
-2. Install the IBM Cloud AppID SDK.
+
+2. Instale el SDK de IBM Cloud AppID.
+
 ```
 npm install ibmcloud-appid-js
 ```
-3. In your code editor, in the src directory of the application, open the App.js file. Import App ID by adding the following code:
+
+3. En su editor de código, en el directorio src de la aplicación, abra el archivo App.js. Importe el ID de la aplicación agregando el siguiente código:
+
 ```
 import AppID from 'ibmcloud-appid-js';
 ```
-4. In the main App() function, declare a new App ID instance with useMemo, which recomputes a memoized value when a dependency changes.
+
+4. En la función principal App(), declare una nueva instancia de ID de aplicación con useMemo, que vuelve a calcular un valor memorizado cuando cambia una dependencia.
+
 ```
-const appID = React.useMemo(() => {
+const appID = useMemo(() => {
     return new AppID()
 }, []);
 ```
-5. Initialize App ID and add error handling. Add your [client ID and discovery endpoint](https://cloud.ibm.com/docs/services/appid?topic=appid-single-page#create-spa-credentials) which can be found in the Applications tab of the App ID dashboard.
+
+5. Inicialice la ID de la aplicación y agregue el manejo de errores. Agregue su [ID de cliente y endpoint de descubrimiento](https://cloud.ibm.com/docs/services/appid?topic=appid-single-page#create-spa-credentials) que se puede encontrar en la pestaña Aplicaciones de la Panel de identificación de la aplicación.
+
 ```
-const [errorState, setErrorState] = React.useState(false);
-const [errorMessage, setErrorMessage] = React.useState('');
+const [errorState, setErrorState] = useState(false);
+const [errorMessage, setErrorMessage] = useState('');
 (async () => {
     try {
       await appID.init({
@@ -64,11 +85,13 @@ const [errorMessage, setErrorMessage] = React.useState('');
     }
 })();
 ```
-6. Create a login action that will execute when the login button is clicked. After a successful authentication, the welcomeDisplayState will be set to true and the userName will be set to the name returned in the App ID token.
+
+6. Cree una acción de inicio de sesión que se ejecutará cuando se haga clic en el botón de inicio de sesión. Después de una autenticación exitosa, welcomeDisplayState se establecerá en _true_ y el nombre de usuario se establecerá en el nombre devuelto en el token de ID de la aplicación.
+
 ```
-const [welcomeDisplayState, setWelcomeDisplayState] = React.useState(false);
-const [loginButtonDisplayState, setLoginButtonDisplayState] = React.useState(true);
-const [userName, setUserName] = React.useState('');
+const [welcomeDisplayState, setWelcomeDisplayState] = useState(false);
+const [loginButtonDisplayState, setLoginButtonDisplayState] = useState(true);
+const [userName, setUserName] = useState('');
 
 const loginAction = async () => {
   try {
@@ -83,14 +106,18 @@ const loginAction = async () => {
   }
 };
 ```
-7. Add a welcome div, the login button that calls the login action, and an error div.
+
+7. Agregue un div de bienvenida, el botón de inicio de sesión que llama a la acción de inicio de sesión y un div de error.
+
 ```
 {welcomeDisplayState && <div> Welcome {userName}! You are now authenticated.</div>}
 {loginButtonDisplayState && 
 <button style={{fontSize: '24px', backgroundColor: 'skyblue', border: 'none', cursor: 'pointer'}} id='login' onClick={loginAction}>Login</button>}
 {errorState && <div style={{color: 'red'}}>{errorMessage}</div>}
 ```
+
 8. Save all of the files. Your entire App.js file should look like this:
+
 ```
 import React from 'react';
 import logo from './logo.svg';
@@ -98,12 +125,12 @@ import './App.css';
 import AppID from 'ibmcloud-appid-js';
 
 function App() {
-    const appID = React.useMemo(() => {
+    const appID = useMemo(() => {
         return new AppID()
     }, []);
 
-    const [errorState, setErrorState] = React.useState(false);
-    const [errorMessage, setErrorMessage] = React.useState('');
+    const [errorState, setErrorState] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     (async () => {
       try {
@@ -117,9 +144,9 @@ function App() {
       }
     })();
 
-    const [welcomeDisplayState, setWelcomeDisplayState] = React.useState(false);
-    const [loginButtonDisplayState, setLoginButtonDisplayState] = React.useState(true);
-    const [userName, setUserName] = React.useState('');
+    const [welcomeDisplayState, setWelcomeDisplayState] = useState(false);
+    const [loginButtonDisplayState, setLoginButtonDisplayState] = useState(true);
+    const [userName, setUserName] = useState('');
 
     const loginAction = async () => {
     try {
@@ -141,7 +168,7 @@ function App() {
             {welcomeDisplayState && <div> Welcome {userName}! You are now authenticated.</div>}
             {loginButtonDisplayState && 
                 <button 
-                    style={{fontSize: '24px', backgroundColor: 'skyblue', border: 'none', cursor: 'pointer'}} 
+                    style={{fontSize: '24px', backgroundColor: 'skyblue', border: 'none', cursor: 'pointer'}}
                     id='login' onClick={loginAction}>Login</button>}
             {errorState && <div style={{color: 'red'}}>{errorMessage}</div>}
           </header>
@@ -150,10 +177,13 @@ function App() {
 }
 export default App;
 ```
-9. Open your terminal. Run the following command to access your app from http://localhost:3000.
+
+9. Abre tu terminal. Ejecute el siguiente comando para acceder a su aplicación desde http://localhost:3000.
+
 ```
 npm start
 ```
-10. Make sure you register your redirect_uri (in this case http://localhost:3000/*) with App ID to ensure that only authorized clients are allowed to participate in the authorization workflow. This can be done on the App ID dashboard under the Manage Authentication tab in the Authentication Settings. Click [here](https://cloud.ibm.com/docs/services/appid?topic=appid-managing-idp#add-redirect-uri) for more details.
 
-Well done! You successfully integrated IBM Cloud App ID's SDK for SPA into a React application.
+10. Asegúrese de registrar su redirección_uri (en este caso, http://localhost:3000/\*) con el ID de la aplicación para garantizar que solo los clientes autorizados puedan participar en el flujo de trabajo de autorización. Esto se puede hacer en el panel de ID de la aplicación en la pestaña Administrar autenticación en la Configuración de autenticación. Haga clic [aquí](https://cloud.ibm.com/docs/services/appid?topic=appid-managing-idp#add-redirect-uri) para obtener más detalles.
+
+¡Bien hecho! Ha integrado correctamente el SDK de IBM Cloud App ID para SPA en una aplicación React.
