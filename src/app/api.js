@@ -1,8 +1,6 @@
 const URL = process.env.REACT_APP_ENDPOINT_SERVELESS;
-const userInfo = JSON.parse(localStorage.getItem("useInfo")) || "";
-const BEARER = userInfo["accessToken"] || "";
 
-const getProducts = () => {
+const getProducts = (BEARER) => {
   return fetch(URL, {
     method: "GET",
     headers: {
@@ -12,7 +10,7 @@ const getProducts = () => {
   }).then((response) => response.json());
 };
 
-const getCreatedProduct = (product) => {
+const getCreatedProduct = (BEARER, product) => {
   return fetch(URL, {
     method: "POST",
     headers: {
@@ -23,7 +21,7 @@ const getCreatedProduct = (product) => {
   }).then((response) => response.json());
 };
 
-const getUpdatedProduct = (product) => {
+const getUpdatedProduct = (BEARER, product) => {
   const { _id, _rev, fullName, category, brand, price } = product;
   return fetch(URL, {
     method: "PATCH",
@@ -50,7 +48,7 @@ const getUpdatedProduct = (product) => {
   });
 };
 
-const getDeletedProduct = (_id, _rev) => {
+const getDeletedProduct = (BEARER, _id, _rev) => {
   return fetch(URL, {
     method: "DELETE",
     headers: {

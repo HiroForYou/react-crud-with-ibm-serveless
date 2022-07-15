@@ -1,17 +1,29 @@
 import React, { useState, useMemo, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import AppID from "ibmcloud-appid-js";
 
 // Styles
 import "./style.scss";
 
 const Header = () => {
-  const [sesionActive, setSesionActive] = useState(false);
-  const [errorState, setErrorState] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const dispatch = useDispatch();
+
+  const userInfo = useSelector((state) => state.userInfo);
+  const [userInfoData, setUserInfoData] = useState(null);
 
   const appID = useMemo(() => {
     return new AppID();
   }, []);
+
+  useEffect(() => {
+    if (userInfoData) {
+      localStorage.setItem("userInfo", JSON.stringify(userInfoData));
+      dispatch({
+        type: "SET_USER_INFO",
+        data: userInfoData,
+      });
+    }
+  }, [dispatch, userInfoData]);
 
   const loginAction = async () => {
     try {
@@ -19,15 +31,15 @@ const Header = () => {
         clientId: process.env.REACT_APP_CLIENT_ID,
         discoveryEndpoint: process.env.REACT_APP_DISCOVERY_ENDPOINT,
       });
-      const tokens = await appID.signin();
-      // access token
-      console.log("tokens", tokens);
-      localStorage.setItem("useInfo", JSON.stringify(tokens));
-      setSesionActive(true);
+      setUserInfoData(await appID.signin());
     } catch (e) {
-      setErrorState(true);
-      setErrorMessage(e.message);
+      console.log("Ocurrió el siguiente error con appID:", e.message);
     }
+  };
+
+  const exitAction = () => {
+    localStorage.removeItem("userInfo");
+    dispatch({ type: "USER_SIGNOUT" });
   };
 
   return (
@@ -36,10 +48,12 @@ const Header = () => {
         <a href="/" className="logo">
           React CRUD Serveless IBM
         </a>
-        {sesionActive ? (
-          <button className="primary-btn">Salir</button>
+        {userInfo ? (
+          <button className="primary-btn" onClick={() => exitAction()}>
+            Salir
+          </button>
         ) : (
-          <button onClick={loginAction} className="primary-btn">
+          <button onClick={() => loginAction()} className="primary-btn">
             Login
           </button>
         )}

@@ -39,7 +39,7 @@ npm install
 npm start
 ```
 
-## Instrucciones detalladas sobre cómo crear su aplicación
+## Instrucciones detalladas
 
 1. Configure una canalización de compilación de frontend usando create-react-app. Luego muévase al directorio del proyecto.
 
@@ -107,16 +107,7 @@ const loginAction = async () => {
 };
 ```
 
-7. Agregue un div de bienvenida, el botón de inicio de sesión que llama a la acción de inicio de sesión y un div de error.
-
-```
-{welcomeDisplayState && <div> Welcome {userName}! You are now authenticated.</div>}
-{loginButtonDisplayState && 
-<button style={{fontSize: '24px', backgroundColor: 'skyblue', border: 'none', cursor: 'pointer'}} id='login' onClick={loginAction}>Login</button>}
-{errorState && <div style={{color: 'red'}}>{errorMessage}</div>}
-```
-
-8. Save all of the files. Your entire App.js file should look like this:
+7. Colocando todo junto:
 
 ```
 import React from 'react';
@@ -178,12 +169,10 @@ function App() {
 export default App;
 ```
 
-9. Abre tu terminal. Ejecute el siguiente comando para acceder a su aplicación desde http://localhost:3000.
+8. Abre tu terminal. Ejecute el siguiente comando para acceder a su aplicación desde http://localhost:3000.
 
 ```
 npm start
 ```
 
-10. Asegúrese de registrar su redirección_uri (en este caso, http://localhost:3000/\*) con el ID de la aplicación para garantizar que solo los clientes autorizados puedan participar en el flujo de trabajo de autorización. Esto se puede hacer en el panel de ID de la aplicación en la pestaña Administrar autenticación en la Configuración de autenticación. Haga clic [aquí](https://cloud.ibm.com/docs/services/appid?topic=appid-managing-idp#add-redirect-uri) para obtener más detalles.
-
-¡Bien hecho! Ha integrado correctamente el SDK de IBM Cloud App ID para SPA en una aplicación React.
+9. Asegúrese de registrar su redirección_uri (en este caso, http://localhost:3000/\*) con el ID de la aplicación para garantizar que solo los clientes autorizados puedan participar en el flujo de trabajo de autorización. Esto se puede hacer en el panel de ID de la aplicación en la pestaña Administrar autenticación en la Configuración de autenticación. Haga clic [aquí](https://cloud.ibm.com/docs/services/appid?topic=appid-managing-idp#add-redirect-uri) para obtener más detalles.

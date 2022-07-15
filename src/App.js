@@ -26,9 +26,9 @@ import MySwal from "./index";
 function App() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
+  const userInfo = useSelector((state) => state.userInfo);
 
   const [loading, setLoading] = useState(false);
-  const [userInfo, setUserInfo] = useState(null);
 
   const [currentProduct, setCurrentProduct] = useState({
     _id: null,
@@ -129,7 +129,7 @@ function App() {
     setLoading(true);
 
     try {
-      await getCreatedProduct(product).then((res) => {
+      await getCreatedProduct(userInfo["accessToken"], product).then((res) => {
         const result = { ...product, _id: res.id, _rev: res.rev };
         console.log("Producto creado", res, result);
         MySwal.fire({
@@ -171,23 +171,29 @@ function App() {
     setLoading(true);
 
     try {
-      await getUpdatedProduct(updatedProduct).then((res) => {
-        let updatedProductCopy = { ...updatedProduct, _rev: res.rev };
-        console.log("actualizado satisfactoriamente", res, updatedProductCopy);
-        MySwal.fire({
-          icon: "success",
-          title: "Producto actualizado satisfactoriamente.",
-        }).then(() => {
-          dispatch({
-            type: "SET_PRODUCTS",
-            data: products.map((product) =>
-              product._id === _id
-                ? Object.assign(product, updatedProductCopy)
-                : product
-            ),
+      await getUpdatedProduct(userInfo["accessToken"], updatedProduct).then(
+        (res) => {
+          let updatedProductCopy = { ...updatedProduct, _rev: res.rev };
+          console.log(
+            "actualizado satisfactoriamente",
+            res,
+            updatedProductCopy
+          );
+          MySwal.fire({
+            icon: "success",
+            title: "Producto actualizado satisfactoriamente.",
+          }).then(() => {
+            dispatch({
+              type: "SET_PRODUCTS",
+              data: products.map((product) =>
+                product._id === _id
+                  ? Object.assign(product, updatedProductCopy)
+                  : product
+              ),
+            });
           });
-        });
-      });
+        }
+      );
     } catch (err) {
       MySwal.fire({
         icon: "error",
@@ -217,7 +223,7 @@ function App() {
     setLoading(true);
 
     try {
-      await getDeletedProduct(_id, _rev).then(() => {
+      await getDeletedProduct(userInfo["accessToken"], _id, _rev).then(() => {
         MySwal.fire({
           icon: "success",
           title: "Producto eliminado satisfactoriamente.",
@@ -246,13 +252,15 @@ function App() {
   const fetchProducts = async () => {
     setLoading(true);
 
+    console.log("aa", userInfo["accessToken"]);
+
     try {
-      await getProducts().then(({ entries }) => {
+      await getProducts(userInfo["accessToken"]).then(({ entries }) => {
         if (entries) {
           setSavedProducts(entries);
           dispatch({ type: "SET_PRODUCTS", data: entries });
         } else {
-          throw "No se pudo obtener entries";
+          throw new Error("No se pudo obtener entries");
         }
       });
     } catch (err) {
@@ -266,11 +274,6 @@ function App() {
       }, 500);
     }
   };
-
-  useEffect(() => {
-    setUserInfo(JSON.parse(localStorage.getItem("useInfo")));
-    // eslint-disable-next-line
-  }, []);
 
   useEffect(() => {
     userInfo

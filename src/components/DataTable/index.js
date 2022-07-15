@@ -4,7 +4,6 @@ import React from "react";
 import "./style.scss";
 
 // Images
-import PlaceholderImg from "../../img/placeholder-product.jpg";
 import SortIcon from "../../img/sort-icon.png";
 
 const DataTable = (props) => {
@@ -63,7 +62,9 @@ const DataTable = (props) => {
               <tr key={product._id}>
                 <td className="field-avatar">
                   <img
-                    src={product.avatar ?? PlaceholderImg}
+                    src={
+                      product.avatar ?? "https://random.imagecdn.app/150/150"
+                    }
                     alt={product.fullName}
                   />
                 </td>
