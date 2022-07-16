@@ -22,7 +22,7 @@ const getCreatedProduct = (BEARER, product) => {
 };
 
 const getUpdatedProduct = (BEARER, product) => {
-  const { _id, _rev, fullName, category, brand, price } = product;
+  const { _id, _rev, fullName, category, brand, price, stock } = product;
   return fetch(URL, {
     method: "PATCH",
     headers: {
@@ -37,6 +37,7 @@ const getUpdatedProduct = (BEARER, product) => {
         category,
         brand,
         price,
+        stock,
       },
     }),
   }).then((response) => {

@@ -38,6 +38,7 @@ function App() {
     category: "",
     brand: "",
     price: "",
+    stock: 0,
   });
   const [activeModal, setActiveModal] = useState({ name: "", active: false });
   const [savedProducts, setSavedProducts] = useState(products);
@@ -118,6 +119,14 @@ function App() {
         });
         dispatch({ type: "SET_PRODUCTS", data: priceSort });
         return;
+      case "stock":
+        const stockSort = [...savedProducts].sort((a, b) => {
+          return sorted
+            ? a.stock.localeCompare(b.stock, "tr")
+            : b.stock.localeCompare(a.stock, "tr");
+        });
+        dispatch({ type: "SET_PRODUCTS", data: stockSort });
+        return;
       default:
         break;
     }
@@ -161,6 +170,7 @@ function App() {
       category: product.category,
       brand: product.brand,
       price: product.price,
+      stock: product.stock,
     });
   };
 
@@ -215,6 +225,7 @@ function App() {
       category: product.category,
       brand: product.brand,
       price: product.price,
+      stock: product.stock,
     });
   };
 
@@ -251,8 +262,6 @@ function App() {
   // Fetch Products
   const fetchProducts = async () => {
     setLoading(true);
-
-    console.log("aa", userInfo["accessToken"]);
 
     try {
       await getProducts(userInfo["accessToken"]).then(({ entries }) => {

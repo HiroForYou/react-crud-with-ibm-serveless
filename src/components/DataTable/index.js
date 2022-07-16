@@ -5,6 +5,7 @@ import "./style.scss";
 
 // Images
 import SortIcon from "../../img/sort-icon.png";
+import SouldOutIcon from "../../img/sold_out.png";
 
 const DataTable = (props) => {
   return (
@@ -53,6 +54,9 @@ const DataTable = (props) => {
                 <img src={SortIcon} alt="Price" />
               </span>
             </th>
+            <th>
+              <span className="column-sort">Stock</span>
+            </th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -72,6 +76,17 @@ const DataTable = (props) => {
                 <td>{product.category}</td>
                 <td>{product.brand}</td>
                 <td>{product.price}</td>
+                <td>
+                  {product.stock > 0 ? (
+                    product.stock
+                  ) : (
+                    <img
+                      src={SouldOutIcon}
+                      alt="Brand"
+                      style={{ width: "90px" }}
+                    />
+                  )}
+                </td>
                 <td className="field-actions">
                   <button
                     className="primary-btn"

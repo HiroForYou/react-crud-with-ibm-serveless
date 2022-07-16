@@ -6,6 +6,7 @@ const CreateProduct = (props) => {
     category: "",
     brand: "",
     price: "",
+    stock: 0,
   };
   const [product, setProduct] = useState(initialData);
 
@@ -67,6 +68,16 @@ const CreateProduct = (props) => {
           type="text"
           name="price"
           value={product.price}
+          onChange={onInputChange}
+        />
+      </div>
+      <div className="form-group">
+        <label>Stock</label>
+        <input
+          type="number"
+          name="stock"
+          value={product.stock}
+          min="0"
           onChange={onInputChange}
         />
       </div>

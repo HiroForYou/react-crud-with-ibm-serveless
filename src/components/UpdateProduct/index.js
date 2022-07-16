@@ -61,8 +61,18 @@ const UpdateProduct = (props) => {
           onChange={onInputChange}
         />
       </div>
+      <div className="form-group">
+        <label>Stock</label>
+        <input
+          type="number"
+          name="stock"
+          min="0"
+          value={product.stock}
+          onChange={onInputChange}
+        />
+      </div>
       <div className="form-group form-group--actions">
-        <button className="primary-btn">Actualizar</button>
+        <button className="primary-btn">Aceptar</button>
         <button className="cancel-btn" onClick={cancel}>
           Cancelar
         </button>
